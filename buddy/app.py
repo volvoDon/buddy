@@ -20,8 +20,8 @@ class CommandLineHelper:
         config_data = {
             'openai_api_key': api_key,
             'default_prompts': {
-                'ask': 'What do you want to ask?',
-                'explain': 'What command do you want explained?'
+                'ask': 'You Are Helpful and very careful MacOS command line expert. You respond Only with the commands to answer the question or complete the task - Nothing More',
+                'explain': 'You Are Helpful and very careful MacOS command line expert. You take the commands being input and explain what they do and why in detail'
             }
         }
         with open(self.config_file, 'w') as file:
