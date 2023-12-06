@@ -49,7 +49,7 @@ Buddy can be used for two primary functions:
 2. **Explain a Command**: Get detailed explanations of command functionalities.
 
    ```bash
-   buddy -e "grep -r "fish" /path/to/search"
+   buddy -e "grep -r 'fish' /path/to/search"
    ```
 
 Responses are automatically copied to your clipboard.
