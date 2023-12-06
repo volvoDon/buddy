@@ -6,7 +6,7 @@ import os
 
 class CommandLineHelper:
     def __init__(self):
-        self.config_file = "config.toml"
+        self.config_file = os.path.expanduser('~/.buddy/config.toml')
         self.config = self.load_or_initialize_config()
 
     def load_or_initialize_config(self):
@@ -16,6 +16,7 @@ class CommandLineHelper:
             return toml.load(self.config_file)
 
     def initialize_config(self):
+        os.makedirs(os.path.dirname(self.config_file), exist_ok=True)
         api_key = input("Enter your OpenAI API key: ")
         config_data = {
             'openai_api_key': api_key,
@@ -66,6 +67,9 @@ class CommandLineHelper:
         print(response)
         pyperclip.copy(response)
 
-if __name__ == "__main__":
+def main():
     app = CommandLineHelper()
     app.run()
+
+if __name__ == "__main__":
+    main()
