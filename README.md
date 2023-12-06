@@ -43,13 +43,13 @@ Buddy can be used for two primary functions:
 1. **Ask a Question**: Receive direct command-line solutions.
 
    ```bash
-   buddy -a "How do I list all files in a directory?"
+   buddy -a "what command can find files containing the word fish"
    ```
 
 2. **Explain a Command**: Get detailed explanations of command functionalities.
 
    ```bash
-   buddy -e "Explain the ls -l command"
+   buddy -e "grep -r "fish" /path/to/search"
    ```
 
 Responses are automatically copied to your clipboard.
